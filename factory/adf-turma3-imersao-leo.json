@@ -1,0 +1,9 @@
+{
+	"name": "adf-turma3-imersao-leo",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a0afddb2-0641-4a64-8de9-4ff555bdfe62",
+		"tenantId": "38821b30-688b-4b92-97e8-305de0ffece7"
+	}
+}
