@@ -24,9 +24,11 @@
 						}
 					},
 					"sink": {
-						"type": "SqlServerSink",
+						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -46,8 +48,12 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "dt_dinamic_sqldb",
-						"type": "DatasetReference"
+						"referenceName": "ds_dynamic_azuresql",
+						"type": "DatasetReference",
+						"parameters": {
+							"table_name": "dbo",
+							"Schema_name": "TB_PlanCor"
+						}
 					}
 				]
 			}
