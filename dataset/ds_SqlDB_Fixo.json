@@ -1,0 +1,42 @@
+{
+	"name": "ds_SqlDB_Fixo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_local",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "COD_EVENTO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NOME",
+				"type": "varchar"
+			},
+			{
+				"name": "DATA_EVENTO",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FKCOD_LOCAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FKCOD_ORGANIZADOR",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "IMERSAO",
+			"table": "ARTISTA"
+		}
+	}
+}
