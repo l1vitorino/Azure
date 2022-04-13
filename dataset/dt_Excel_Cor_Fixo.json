@@ -1,0 +1,26 @@
+{
+	"name": "dt_Excel_Cor_Fixo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_file_system",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Plan1",
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "plan_cor.xlsx"
+			}
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}
