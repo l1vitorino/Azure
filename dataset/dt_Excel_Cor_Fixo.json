@@ -12,7 +12,8 @@
 			"location": {
 				"type": "FileServerLocation",
 				"fileName": "plan_cor.xlsx"
-			}
+			},
+			"firstRowAsHeader": true
 		},
 		"schema": [
 			{
