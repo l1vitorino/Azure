@@ -1,16 +1,22 @@
 {
 	"name": "ls_sql_local",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=DESKTOP-EVAST6L;initial catalog=BD_EVENTOS_IMERSAO;user id=LeoVitorino",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjNTllNTkyMC02YzFmLTQwMDAtOTIwNy1iNDUyZWI3ZjYzYzYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_key_vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "secret-db-local"
+			}
 		},
 		"connectVia": {
 			"referenceName": "irselfturma3",
 			"type": "IntegrationRuntimeReference"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
