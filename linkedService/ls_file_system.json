@@ -1,0 +1,23 @@
+{
+	"name": "ls_file_system",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "D:\\Desktop\\01 - Arquivos CSV - JSON - XLSX",
+			"userId": "VitorinoLeo",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_key_vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "secret-user-local"
+			}
+		},
+		"connectVia": {
+			"referenceName": "irselfturma3",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
